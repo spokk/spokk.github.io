@@ -16,6 +16,7 @@
 body {
     background: #ededed;
     margin: 50px 0;
+    min-width: 320px;
 }
 
 .display-block {
