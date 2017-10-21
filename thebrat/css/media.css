@@ -11,6 +11,12 @@
 }
 
 @media only screen and (max-width: 767px) {
+    /*main intro*/
+    .audio-control img {
+        width: 32px;
+        height: 32px;
+    }
+    /*main intro end*/
     /*main img-block*/
     .img-block .container {
         -webkit-box-orient: vertical;
