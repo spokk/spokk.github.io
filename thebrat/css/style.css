@@ -48,15 +48,26 @@ body {
 
 .intro .container {
     display: block;
+    background: #000;
+    position: relative;
 }
 
-video {
+.video-intro{
     width: 100%;
     height: auto;
+    -webkit-filter: contrast(115%);
+    filter: contrast(115%);
     display: block;
-    -webkit-filter: contrast(125%);
-    filter: contrast(125%);
+    max-height: 450px;
+    min-height: 150px;
 }
+
+video[poster] {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 
 .video-controls {
     width: 100%;
@@ -84,9 +95,46 @@ video {
     opacity: 1;
 }
 
+.play-button {
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    top: 44%;
+    cursor: pointer;
+    border-radius: 50%;
+
+    -webkit-transition: .4;
+    transition: .4;
+}
+
+.play-button img {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #fff;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.65;
+}
+
+.play-button img[src="img/stop.png"] {
+    opacity: 0;
+}
+
+.video-controls:hover .play-button img {
+    opacity: .65;
+}
+
+.video-controls:hover .play-button img:hover {
+    opacity: 1;
+}
+
 .yt-control {
     width: 15%;
-    height: 10%;
+    height: 70px;
+    min-width: 140px;
     position: absolute;
     bottom: 2%;
     right: 1.5%;
@@ -184,6 +232,12 @@ video {
 
 .end-video .container {
     display: block;
+}
+.play-button-end{
+    top: 48%;
+}
+.videoEnd{
+    background: #000;
 }
 
 /*main last-video end*/

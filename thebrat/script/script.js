@@ -1,31 +1,49 @@
-var videoMute = document.querySelector(".audio-control"); //кнопка вкл/выкл звука
-var video = document.querySelector("video"); //первое видео (интро) 
+var videoMute = document.querySelectorAll(".audio-control"); //кнопка вкл/выкл звука
+/*var videoIntro = document.querySelector(".video-intro"); //первое видео (интро) 
+var videoEnd = document.querySelector(".video-end"); // второе видео (конец)*/
+var playBtn = document.querySelectorAll(".play-button");
 
-//отключение звука на телефонах
-if (isTouchDevice = !!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/)) {
-    document.querySelector(".intro video source").setAttribute("src", "video/intro480.mp4");
-    disableMute();
-} else {
-    enableMute();
+for (var i = 0, j = 0; i < videoMute.length, j < playBtn.length; i++, j++) {
+    videoMute[i].addEventListener("click", checkMute); //событие клика для кнопки вкл/выкл звука
+    playBtn[j].addEventListener("click", checkVideo); //событие клика для кнопки вкл/выкл видео
 }
 
-
-videoMute.addEventListener("click", checkMute); //событие клика для кнопки вкл/выкл звука
-
-function enableMute() { //включить звук
+function enableMute(video,img) { //включить звук
     video.muted = false;
-    document.querySelector(".audio-control img").setAttribute("src", "img/audio-control-on.png");
+    document.querySelector(img).setAttribute("src", "img/audio-control-on.png");
 }
 
-function disableMute() { //отключить звук
+function disableMute(video,img) { //отключить звук
     video.muted = true;
-    document.querySelector(".audio-control img").setAttribute("src", "img/audio-control-off.png");
+    document.querySelector(img).setAttribute("src", "img/audio-control-off.png");
 }
 
 function checkMute() { //проверка текущего состояния звука
+    var video = document.querySelector("." + this.getAttribute("data-video"));
+    var img = ".audio-control-" + video.getAttribute("class");
     if (video.muted == false) {
-        disableMute();
+        disableMute(video,img);
     } else {
-        enableMute();
+        enableMute(video,img);
+    }
+}
+
+function playVideo(video, img) { //включить видео
+    video.play();
+    document.querySelector(img).setAttribute("src", "img/stop.png");
+}
+
+function stopVideo(video, img) { //остановить видео
+    video.pause();
+    document.querySelector(img).setAttribute("src", "img/play.png");
+}
+
+function checkVideo() { //проверка текущего состояния звука
+    var video = document.querySelector("." + this.getAttribute("data-video"));
+    var img = ".play-button-" + video.getAttribute("class") + " img";
+    if (video.paused == true) {
+        playVideo(video, img);
+    } else {
+        stopVideo(video, img);
     }
 }

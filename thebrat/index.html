@@ -23,16 +23,16 @@
         <section class="intro">
             <div class="container">
                 <div class="video-controls">
-                    <div class="audio-control">
-                        <img src="img/audio-control-on.png" alt="mute" class="audio-control-img-on" alt="">
+                    <div class="audio-control" data-video="videoIntro">
+                        <img src="img/audio-control-off.png" alt="mute" class="audio-control-img-on audio-control-videoIntro" alt="">
                     </div>
                     <a href="https://www.youtube.com" target="_blank">
                     <img src="img/youtube-logo.png" alt="" class="yt-control">
                     </a>
-                    <div class="video-youtube"></div>
+                    <div class="play-button play-button-videoIntro" data-video="videoIntro"><img src="img/play.png" alt=""></div>
                 </div>
-                <video autoplay loop poster="img/video-poster.png" muted preload="none">
-                <source src="video/intro2.mp4" type="video/mp4">
+                <video loop poster="img/video-poster2.png" muted class="videoIntro">
+                <source src="video/intro450.mp4" type="video/mp4">
             </video>
             </div>
         </section>
@@ -71,8 +71,16 @@
         </section>
         <section class="end-video">
             <div class="container">
-                <div class="video-controls"></div>
-                <video autoplay loop muted preload="none" poster="img/video-poster.png">
+                <div class="video-controls">
+                    <div class="audio-control" data-video="videoEnd">
+                        <img src="img/audio-control-off.png" alt="mute" class="audio-control-img-on audio-control-videoEnd" alt="">
+                    </div>
+                    <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/youtube-logo.png" alt="" class="yt-control">
+                    </a>
+                    <div class="play-button play-button-videoEnd" data-video="videoEnd"><img src="img/play.png" alt=""></div>
+                </div>
+                <video muted loop poster="img/posterEnd.png" class="videoEnd">
                     <source src="video/end2.mp4" type="video/mp4">
                 </video>
             </div>

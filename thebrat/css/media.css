@@ -16,6 +16,12 @@
         width: 32px;
         height: 32px;
     }
+    .yt-control {
+        display: none;
+    }
+    .play-button img[src="img/stop.png"] {
+        visibility: hidden;
+    }
     /*main intro end*/
     /*main img-block*/
     .img-block .container {
@@ -43,4 +49,10 @@
         padding-bottom: 50px;
     }
     /*main img-block end*/
+}
+
+@media only screen and (max-width: 480px){
+    .play-button{
+        top: 30%;
+    }
 }
