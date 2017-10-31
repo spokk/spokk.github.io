@@ -59,8 +59,8 @@ body {
     max-height: 450px;
     -webkit-filter: contrast(115%);
     filter: contrast(115%);
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all .6s;
+    transition: all .6s;
 }
 
 

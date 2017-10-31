@@ -29,7 +29,7 @@ function checkMute() { //проверка текущего состояния з
 }
 
 function playVideo(video, img) { //включить видео
-    video.style.maxHeight="1000px";
+    video.style.maxHeight="720px";
     document.querySelector(".video-controls").classList.remove("intro-controls");
     video.play();
     document.querySelector(img).setAttribute("src", "img/stop.png");
