@@ -19,13 +19,14 @@ body {
     min-width: 320px;
 }
 
-.display-block {
-    display: block;
-}
+.display-block {}
 
 .display-none {
-    display: none;
+    height: 0px;
 }
+
+
+
 
 /*header*/
 
@@ -34,6 +35,7 @@ body {
     width: 100%;
     background: #2E3746;
     border-radius: 6px 6px 0 0;
+    visibility:
 }
 
 /*header end*/
@@ -49,23 +51,17 @@ body {
 .intro .container {
     display: block;
     background: #000;
-    position: relative;
+    min-height: 450px;
 }
 
-.video-intro{
-    width: 100%;
-    height: auto;
-    -webkit-filter: contrast(115%);
-    filter: contrast(115%);
-    display: block;
-    max-height: 450px;
-    min-height: 150px;
-}
-
-video[poster] {
-    display: block;
+.videoIntro {
     width: 100%;
     height: 100%;
+    display: block;
+    max-height: 450px;
+    -webkit-filter: contrast(115%);
+    filter: contrast(115%);
+    transition: all 1s;
 }
 
 
@@ -76,9 +72,24 @@ video[poster] {
     position: absolute;
 }
 
+.intro-controls {
+    background: url(../gif/intro_gif.gif) center center;
+    background-size: cover;
+}
+.intro-controls:after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46,55,70,.6);
+}
+
+
 .audio-control {
-    margin: 12px 0 0 12px;
+
     position: absolute;
+    bottom: 5px;
+    left: 10px;
     opacity: 0.65;
     -webkit-transition: .4;
     transition: .4;
@@ -87,8 +98,8 @@ video[poster] {
 }
 
 .audio-control img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
 }
 
 .audio-control:hover {
@@ -96,25 +107,21 @@ video[poster] {
 }
 
 .play-button {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     display: block;
-    position: relative;
-    margin: 0 auto;
-    top: 44%;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
     cursor: pointer;
     border-radius: 50%;
-
     -webkit-transition: .4;
     transition: .4;
 }
 
 .play-button img {
-    width: 64px;
-    height: 64px;
-    border: 1px solid #fff;
-    background: #fff;
-    display: block;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     opacity: 0.65;
 }
@@ -233,10 +240,12 @@ video[poster] {
 .end-video .container {
     display: block;
 }
-.play-button-end{
+
+.play-button-end {
     top: 48%;
 }
-.videoEnd{
+
+.videoEnd {
     background: #000;
 }
 

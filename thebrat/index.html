@@ -22,7 +22,7 @@
     <main>
         <section class="intro">
             <div class="container">
-                <div class="video-controls">
+               <div class="video-controls intro-controls darkblue-filter">
                     <div class="audio-control" data-video="videoIntro">
                         <img src="img/audio-control-off.png" alt="mute" class="audio-control-img-on audio-control-videoIntro" alt="">
                     </div>
@@ -31,8 +31,8 @@
                     </a>
                     <div class="play-button play-button-videoIntro" data-video="videoIntro"><img src="img/play.png" alt=""></div>
                 </div>
-                <video loop poster="img/video-poster2.png" muted class="videoIntro">
-                <source src="video/intro450.mp4" type="video/mp4">
+                <video loop muted data-video="videoIntro" class="videoIntro">
+                <source src="video/intro.mp4" type="video/mp4">
             </video>
             </div>
         </section>
@@ -69,7 +69,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sint odio adipisci, explicabo cupiditate earum delectus officiis exercitationem nemo eum ducimus libero, repellat eligendi asperiores obcaecati sapiente commodi nisi? Dolorum quam quos nulla sapiente nobis animi consequatur, eligendi. Repellendus provident tenetur facere unde necessitatibus recusandae porro distinctio delectus harum? Beatae inventore eligendi voluptatem illo error ab veritatis consequatur dolorem vel quisquam ad quibusdam fugit perferendis soluta, sequi repudiandae cumque facilis vero nostrum ratione accusantium odit maiores quae eaque. Delectus, iste!</p>
             </div>
         </section>
-        <section class="end-video">
+        <!--<section class="end-video">
             <div class="container">
                 <div class="video-controls">
                     <div class="audio-control" data-video="videoEnd">
@@ -80,11 +80,11 @@
                     </a>
                     <div class="play-button play-button-videoEnd" data-video="videoEnd"><img src="img/play.png" alt=""></div>
                 </div>
-                <video muted loop poster="img/posterEnd.png" class="videoEnd">
+                <video muted loop poster="img/posterEnd.png" data-video="videoEnd" class="videoEnd">
                     <source src="video/end2.mp4" type="video/mp4">
                 </video>
             </div>
-        </section>
+        </section>-->
     </main>
     <footer>
         <div class="container">
