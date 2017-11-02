@@ -1,0 +1,245 @@
+ @media only screen and (max-width: 1200px) {
+     .container {
+         width: 90%;
+     }
+     /*MAIN*/
+     /*MAIN ART SCHOOL*/
+     .art-school h2 span {
+         font-size: 64px;
+     }
+     /*MAIN ART SCHOOL END*/
+     /*MAIN ARTICLES*/
+     .articles li {
+         background-size: 130px 130px;
+         padding-left: 150px;
+     }
+     /*MAIN ARTICLES END*/
+     /*MAIN END*/
+ }
+
+ @media only screen and (max-width: 992px) {
+     /*HEADER*/
+     header {
+         padding: 80px 0 30px 0;
+     }
+     .logo {
+         text-align: center;
+         width: 100%;
+     }
+     .tel {
+         text-align: center;
+         width: 100%;
+     }
+     header .header-info {
+         height: auto;
+
+     }
+     .header-nav {
+         position: fixed;
+         top: 0;
+         background-color: #fff;
+         transform: none;
+         width: 100%;
+         padding: 10px 0;
+         border-bottom-left-radius: 20px;
+         border-bottom-right-radius: 20px;
+         border-bottom: 1px solid lightgray;
+     }
+
+     header nav ul {
+         display: flex;
+     }
+     header nav ul li {
+         padding: 8px 0;
+     }
+     header nav ul li:hover {
+         transform: none;
+     }
+     /*HEADER END*/
+     /*MAIN*/
+     /*MAIN TALLENT*/
+     .main-tallent p {
+         font-size: 77px;
+     }
+     /*MAIN TALLENT END*/
+     /*MAIN ART SCHOOL*/
+     .art-school h2 span {
+         font-size: 34px;
+     }
+     /*MAIN ART SCHOOL END*/
+     /*MAIN ARTICLES*/
+     .articles h3 {
+         text-align: center;
+     }
+     .articles li a {
+         align-self: center;
+         font-size: 36px;
+     }
+     .articles ul {
+         justify-content: center;
+     }
+     .articles li {
+         background-size: 160px 160px;
+         background-position: center top;
+         padding: 180px 0 0 0;
+         width: 70%;
+         display: flex;
+         flex-direction: column;
+     }
+     /*MAIN ARTICLES END*/
+     /*MAIN PICTURES*/
+     .pictures h5 span {
+         font-size: 66px;
+     }
+     .pictures img {
+         width: 48%;
+     }
+     /*MAIN PICTURES END*/
+     /*MAIN END*/
+     /*FOOTER*/
+     footer .container {
+         flex-direction: column;
+     }
+     footer address {
+         width: 100%;
+     }
+     iframe {
+         width: 100%;
+         padding: 30px 0 0 0;
+     }
+     .copyright {
+         position: absolute;
+         margin: 400px 0 0 0;
+     }
+     /*FOOTER END*/
+ }
+
+ @media only screen and (max-width: 786px) {
+     /*HEADER*/
+     header nav ul {
+         display: none;
+     }
+     .mobile-menu-logo {
+         display: block;
+         width: 30px;
+         margin-left: 20px;
+     }
+     header nav ul li {
+
+         width: 100%;
+         margin: 10px 0;
+     }
+
+     .nav-active {
+         transform: none;
+
+     }
+     /*HEADER END*/
+     /*MAIN*/
+     /*MAIN TALLENT*/
+     .main-tallent {
+         padding: 120px 0;
+         text-align: center;
+     }
+     .main-tallent a {
+         align-self: center;
+     }
+     .main-tallent p {
+         font-size: 57px;
+     }
+
+     /*MAIN TALLENT END*/
+     /*MAIN ART SCHOOL*/
+     .art-school .container {
+         background: none;
+         ;
+     }
+     .art-school {
+         text-align: center;
+     }
+     .art-school p {
+         text-align: justify;
+         width: 100%;
+     }
+     /*MAIN ART SCHOOL END*/
+     /*MAIN ARTICLES*/
+     .articles h3 {
+         font-size: 44px;
+     }
+     .articles li {
+         width: 100%;
+     }
+     /*MAIN ARTICLES END*/
+     /*MAIN PICTURES*/
+     .pictures .container {
+         justify-content: center;
+     }
+     .pictures h5 {
+         text-align: center;
+     }
+     .pictures h5 span {
+         font-size: 46px;
+     }
+     .pictures img {
+         width: 88%;
+     }
+     .pictures img:hover {
+         transform: none;
+     }
+     /*MAIN PICTURES END*/
+     /*MAIN END*/
+     /*FOOTER*/
+     footer {
+         text-align: center;
+     }
+     footer h6 {
+         font-size: 62px;
+     }
+     footer p,
+     footer a {
+         font-size: 20px;
+     }
+     /*FOOTER END*/
+ }
+
+ @media only screen and (max-width: 580px) {
+     /*HEADER*/
+     .logo {
+         letter-spacing: 0;
+         font-size: 28px;
+     }
+     .logo a {
+         letter-spacing: 0;
+         padding: 0;
+         font-size: 42px;
+     }
+     .logo a::before {
+         display: none;
+     }
+     .tel {
+         font-size: 18px;
+     }
+     .tel a {
+         font-size: 24px;
+     }
+     /*HEADER END*/
+     /*MAIN*/
+     /*MAIN TALLENT*/
+     .main-tallent p {
+         font-size: 32px;
+     }
+     .main-tallent a {
+         font-size: 24px;
+     }
+     /*MAIN TALLENT END*/
+     /*MAIN END*/
+     /*FOOTER*/
+     footer h6 {
+         font-size: 54px;
+     }
+     /*FOOTER END*/
+ }
+
+ /* Extra Small Devices, Phones */
+
+ @media only screen and (max-width: 320px) {}
