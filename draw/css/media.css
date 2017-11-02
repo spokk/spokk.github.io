@@ -43,6 +43,7 @@
          padding: 10px 0;
          border-bottom-left-radius: 20px;
          border-bottom-right-radius: 20px;
+         border-bottom: 1px solid lightgray;
      }
 
      header nav ul {
@@ -62,8 +63,8 @@
      }
      /*MAIN TALLENT END*/
      /*MAIN ART SCHOOL*/
-     .art-school h2 {
-         font-size: 44px;
+     .art-school h2 span {
+         font-size: 34px;
      }
      /*MAIN ART SCHOOL END*/
      /*MAIN ARTICLES*/
@@ -129,7 +130,7 @@
          margin: 10px 0;
      }
 
-     header nav ul li:first-child {
+     .nav-active {
          transform: none;
 
      }

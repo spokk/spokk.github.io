@@ -13,6 +13,7 @@ body {
 a {
     text-decoration: none;
     outline: none;
+    cursor: pointer;
 }
 
 li {
@@ -108,8 +109,11 @@ header nav ul li {
     transition: .3s;
 }
 
-header nav ul li:first-child {
+.nav-active {
     transform: rotate(-6deg);
+}
+
+header nav ul li:nth-child(1) {
     background: #ffc200;
 }
 
