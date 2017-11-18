@@ -151,6 +151,86 @@ body {
 
 /*main intro end*/
 
+/*main examples*/
+
+.examples {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.examples h1 {
+    width: 100%;
+    font-size: 36px;
+    color: #2E3746;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.examples .container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.examples .example-item {
+    max-width: 670px;
+    max-height: 360px;
+    margin: 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #c1c1c1;
+    border-radius: 24px;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    position: relative;
+}
+
+.examples .example-item img {
+    width: 50%;
+    height: 100%;
+    border-radius: 23px;
+}
+
+.examples .example-item p {
+    width: 50%;
+    font-size: 19px;
+    color: #808080;
+    text-align: center;
+    line-height: 32px;
+    padding: 10px 0 10px 20px;
+}
+
+.examples .example-item:nth-child(3) img {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.examples .example-item h3 {
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    font-size: 26px;
+    padding: 5px 10px;
+    bottom: 15px;
+    left: 30px;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, .35);
+    letter-spacing: 1.4px;
+}
+
+.examples .example-item:nth-child(3) h3 {
+    right: 15px;
+    left: inherit;
+}
+
+/*main examples end*/
+
 /*main info-block*/
 
 .info-block .container {
