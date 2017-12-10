@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri';
+}
+
+.section {
+    background-color: #000;
+}
+
+.btnleft,
+.btnright {
+    height: 60px;
+    width: 200px;
+    margin: auto 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    background: #F00;
+    display: inline-block;
+    border: 1px solid #fff;
+    z-index: 10;
+
+}
+
+.btnleft {
+    background: linear-gradient(to right, purple 0%, purple 50%, #000 50%, #000 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.3s;
+    border-left: none;
+}
+
+.btnright {
+    background: linear-gradient(to right, #000 0%, #000 50%, purple 50%, purple 100%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    transition: all 0.3s;
+    border-right: none;
+}
+
+.btnleft:hover {
+    background-position: 0 0;
+    border-color: purple;
+}
+
+
+.btnright:hover {
+    background-position: 100% 100%;
+    border-color: purple;
+}
+
+.leftImg,
+.rightImg {
+    width: 50vh;
+    height: 100vh;
+    background: red;
+    transition: all .5s;
+}
+
+.leftImg {
+    position: absolute;
+    left: -50vh;
+    background: url(img/1.jpg);
+
+}
+
+.rightImg {
+    position: absolute;
+    right: -50vh;
+    background: url(img/4.jpg);
+}
+
+.btnleft:hover + .leftImg {
+    left: 0;
+}
+
+.btnright:hover + .rightImg {
+    right: 0;
+}
+
+
+.section > div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.firstsection > div {
+    justify-content: space-between;
+
+}
+
+.textSide,
+.imgSide {
+    width: 50%;
+    color: #fff;
+}
+
+.imgSide {}
+
+.section:nth-child(2) .imgSide {
+    background: url(img/1.jpg);
+    background-size: cover;
+}
+
+.section:nth-child(3) .imgSide {
+    background: url(img/2.jpg);
+    background-size: cover;
+}
+
+.section:nth-child(4) .imgSide {
+    background: url(img/3.jpg);
+    background-size: cover;
+}
+
+.section:nth-child(5) .imgSide {
+    background: url(img/4.jpg);
+    background-size: cover;
+}
+
+.textSide {
+    text-align: center;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section:nth-child(2n+1) .imgSide {
+    order: -1;
+}
