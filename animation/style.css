@@ -5,9 +5,24 @@
     font-family: 'Calibri';
 }
 
+.fixed {
+    top: 0;
+    position: fixed;
+    height: 50px;
+    display: block;
+    width: 100%;
+    background: #333;
+    z-index: 9;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+}
+
 .section {
     background-color: #000;
 }
+
+
 
 .btnleft,
 .btnright {
@@ -22,24 +37,29 @@
     background: #F00;
     display: inline-block;
     border: 1px solid #fff;
-    z-index: 10;
-
+    z-index: 50;
+    position: fixed;
+    transition: all 0.7s;
 }
 
 .btnleft {
     background: linear-gradient(to right, purple 0%, purple 50%, #000 50%, #000 100%);
     background-size: 200% 100%;
     background-position: 100% 0;
-    transition: all 0.3s;
     border-left: none;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .btnright {
     background: linear-gradient(to right, #000 0%, #000 50%, purple 50%, purple 100%);
     background-size: 200% 100%;
     background-position: 0 0;
-    transition: all 0.3s;
     border-right: none;
+    top: 50%;
+    left: calc(100% - 200px);
+    transform: translateY(-50%);
 }
 
 .btnleft:hover {
@@ -58,18 +78,18 @@
     width: 50vh;
     height: 100vh;
     background: red;
+    position: absolute;
     transition: all .5s;
+    z-index: 2;
 }
 
 .leftImg {
-    position: absolute;
     left: -50vh;
     background: url(img/1.jpg);
 
 }
 
 .rightImg {
-    position: absolute;
     right: -50vh;
     background: url(img/4.jpg);
 }
@@ -100,7 +120,9 @@
     color: #fff;
 }
 
-.imgSide {}
+.section:first-child {
+    background: pink;
+}
 
 .section:nth-child(2) .imgSide {
     background: url(img/1.jpg);
@@ -132,4 +154,41 @@
 
 .section:nth-child(2n+1) .imgSide {
     order: -1;
+}
+
+
+
+.bottomLeft {
+    top: 92%;
+    transform: none;
+    left: 0;
+    right: inherit;
+}
+
+.bottomRight {
+    top: 84%;
+    transform: none;
+    left: 0;
+    right: inherit;
+    border: 1px solid #fff;
+    border-left: none;
+
+}
+
+.bottomLeftRevert {
+    top: 92%;
+    transform: none;
+    left: calc(100% - 200px);
+    border: 1px solid #fff;
+    border-right: none;
+
+}
+
+.bottomRightRevert {
+    top: 84%;
+    transform: none;
+    left: calc(100% - 200px);
+    border: 1px solid #fff;
+    border-right: none;
+
 }
