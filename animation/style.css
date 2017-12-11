@@ -121,7 +121,7 @@
 }
 
 .section:first-child {
-    background: pink;
+    background: green;
 }
 
 .section:nth-child(2) .imgSide {
@@ -159,14 +159,14 @@
 
 
 .bottomLeft {
-    top: 92%;
+    top: 88%;
     transform: none;
     left: 0;
     right: inherit;
 }
 
 .bottomRight {
-    top: 84%;
+    top: 74%;
     transform: none;
     left: 0;
     right: inherit;
@@ -176,7 +176,7 @@
 }
 
 .bottomLeftRevert {
-    top: 92%;
+    top: 88%;
     transform: none;
     left: calc(100% - 200px);
     border: 1px solid #fff;
@@ -185,7 +185,7 @@
 }
 
 .bottomRightRevert {
-    top: 84%;
+    top: 74%;
     transform: none;
     left: calc(100% - 200px);
     border: 1px solid #fff;
