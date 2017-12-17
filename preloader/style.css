@@ -18,7 +18,7 @@ body {
     transform: translate(-50%, -50%);
     -webkit-animation: topScale 4s linear forwards;
     animation: topScale 4s linear forwards;
-    max-width: 1360px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -444,7 +444,7 @@ body {
         filter: blur(0px);
     }
     100% {
-        top: -110%;
+        top: -130%;
         -webkit-transform: translate(-50%, -50%) scale(10);
         transform: translate(-50%, -50%) scale(10);
         -webkit-filter: blur(5px);
@@ -462,7 +462,7 @@ body {
         filter: blur(0px);
     }
     100% {
-        top: -110%;
+        top: -130%;
         -webkit-transform: translate(-50%, -50%) scale(10);
         transform: translate(-50%, -50%) scale(10);
         -webkit-filter: blur(5px);
