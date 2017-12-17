@@ -4,224 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            background-color: #444;
-        }
-
-        /*ring*/
-
-        .ring {
-            position: absolute;
-            top: 50%;
-            left: calc(50% + 80px);
-            transform: translate(-50%, -50%) rotate(45deg);
-            width: 150px;
-            height: 150px;
-            background: transparent;
-            border-radius: 50%;
-            z-index: 8;
-        }
-
-        .ring:before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            width: 100%;
-            height: 100%;
-            border: 3px solid transparent;
-            border-top: 3px solid red;
-            border-right: 3px solid red;
-            border-radius: 50%;
-            animation: animateCircle 1.5s linear forwards;
-        }
-
-        .ringHide {
-            position: absolute;
-            width: 160px;
-            height: 170px;
-            background: transparent;
-            top: 50%;
-            left: calc(50% - 80px);
-            transform: translate(-50%, -50%);
-            z-index: 8;
-            display: block;
-            overflow: hidden;
-        }
-
-
-        .ringSpan {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 75px;
-            height: 4px;
-            background: transparent;
-            transform-origin: left;
-            animation: animate 1.5s linear forwards;
-            transform: rotate(90deg);
-            z-index: 20;
-        }
-
-        .ringSpan:before {
-            content: '';
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-radius: 50%;
-            background: red;
-            top: 0px;
-            right: 0px;
-            animation: downsize 1.5s linear forwards;
-        }
-
-        @keyframes animateCircle {
-            40% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(180deg);
-            }
-        }
-
-        @keyframes animate {
-            40% {
-                transform: rotate(90deg);
-            }
-            100% {
-                transform: rotate(270deg);
-            }
-        }
-
-        @keyframes downsize {
-            15% {
-                width: 24px;
-                height: 24px;
-                top: -12px;
-                right: -13px;
-            }
-            20% {
-                width: 16px;
-                height: 16px;
-                top: -6px;
-                right: -8px;
-            }
-            100% {
-                width: 0px;
-                height: 0px;
-                top: 0px;
-                right: 0px;
-            }
-        }
-
-        /*ring right*/
-        .ringReverse {
-            position: absolute;
-            top: 50%;
-            left: calc(50% - 80px);
-            transform: translate(-50%, -50%) rotate(225deg);
-            width: 150px;
-            height: 150px;
-            background: transparent;
-            border-radius: 50%;
-        }
-
-        .ringReverse:before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            width: 100%;
-            height: 100%;
-            border: 3px solid transparent;
-            border-top: 3px solid #fff000;
-            border-right: 3px solid #fff000;
-            border-radius: 50%;
-            animation: animateCircleReverse 1.5s linear forwards;
-
-        }
-
-        .ringReverseHide {
-            position: absolute;
-            width: 160px;
-            height: 170px;
-            background: transparent;
-            top: 50%;
-            left: calc(50% + 80px);
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-        }
-
-
-        .ringReverseSpan {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 75px;
-            background: transparent;
-            transform-origin: left;
-            animation: animateReverse 1.5s linear forwards;
-            transform: rotate(270deg);
-            z-index: 10;
-        }
-
-        .ringReverseSpan:before {
-            content: '';
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-radius: 50%;
-            background: #fff000;
-            top: 0;
-            right: 0;
-            animation: downsizeReverse 1.5s linear forwards;
-        }
-
-        @keyframes animateCircleReverse {
-            40% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(180deg);
-            }
-        }
-
-        @keyframes animateReverse {
-            40% {
-                transform: rotate(270deg);
-            }
-            100% {
-                transform: rotate(450deg);
-            }
-        }
-
-        @keyframes downsizeReverse {
-            15% {
-                width: 24px;
-                height: 24px;
-                top: -12px;
-                right: -13px;
-            }
-            20% {
-                width: 16px;
-                height: 16px;
-                top: -6px;
-                right: -8px;
-            }
-            100% {
-                width: 0px;
-                height: 0px;
-                top: 0px;
-                right: 0px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -229,12 +12,21 @@
     <div class="preload">
         <span class="ringSpan"></span>
         <div class="ringHide">
-            <div class="ring"></div>
+            <div class="ring">
+
+            </div>
+
         </div>
 
         <span class="ringReverseSpan"></span>
         <div class="ringReverseHide">
-            <div class="ringReverse"></div>
+            <div class="ringReverse">
+
+            </div>
+        </div>
+        <div class="centerCircle">
+            <div class="innerCircleLeft"></div>
+            <div class="innerCircleRight"></div>
         </div>
     </div>
 
