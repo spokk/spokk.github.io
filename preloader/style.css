@@ -17,7 +17,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: topScale 4s linear forwards;
+    -webkit-animation: topScale 2s linear forwards;
     animation: topScale 2s linear forwards;
     -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
@@ -357,6 +357,7 @@ body {
     -webkit-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1);
     z-index: -1;
+    overflow: hidden;
 }
 
 .innerCircleRight {
@@ -387,55 +388,51 @@ body {
     overflow: hidden;
 }
 
+
 @-webkit-keyframes innerCircleLeft {
     0% {
-        left: calc(50% - 90px);
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        left: calc(50% - 15px);
-        -webkit-transform: translate(-50%, -50%) scale(8);
-        transform: translate(-50%, -50%) scale(8);
+        -webkit-transform: translate(calc(-50% + 75px), -50%) scale(8);
+        transform: translate(calc(-50% + 75px), -50%) scale(8);
     }
 }
+
 
 @keyframes innerCircleLeft {
     0% {
-        left: calc(50% - 90px);
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        left: calc(50% - 15px);
-        -webkit-transform: translate(-50%, -50%) scale(8);
-        transform: translate(-50%, -50%) scale(8);
+        -webkit-transform: translate(calc(-50% + 75px), -50%) scale(8);
+        transform: translate(calc(-50% + 75px), -50%) scale(8);
     }
 }
+
 
 @-webkit-keyframes innerCircleRight {
     0% {
-        left: calc(50% + 90px);
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        left: calc(50% + 15px);
-        -webkit-transform: translate(-50%, -50%) scale(8);
-        transform: translate(-50%, -50%) scale(8);
+        -webkit-transform: translate(calc(-50% - 75px), -50%) scale(8);
+        transform: translate(calc(-50% - 75px), -50%) scale(8);
     }
 }
 
+
 @keyframes innerCircleRight {
     0% {
-        left: calc(50% + 90px);
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        left: calc(50% + 15px);
-        -webkit-transform: translate(-50%, -50%) scale(8);
-        transform: translate(-50%, -50%) scale(8);
+        -webkit-transform: translate(calc(-50% - 75px), -50%) scale(8);
+        transform: translate(calc(-50% - 75px), -50%) scale(8);
     }
 }
 
@@ -453,7 +450,6 @@ body {
         -webkit-filter: blur(5px);
         filter: blur(5px);
     }
-
 }
 
 
@@ -470,5 +466,4 @@ body {
         -webkit-filter: blur(5px);
         filter: blur(5px);
     }
-
 }
