@@ -15,7 +15,7 @@
         svg {
             align-self: center;
             border: 1px solid #ddd;
-            transform: scale(2);
+            transform: scale(3);
             background: #000;
         }
 
@@ -26,12 +26,28 @@
             animation: path1 2s ease-out forwards infinite;
         }
 
+        .path-bg {
+            stroke: #fff;
+            stroke-width: 1px;
+            stroke-opacity: 0;
+            animation: path-bg 2s ease-out forwards infinite;
+        }
+
         @keyframes path1 {
             from {
                 stroke-dashoffset: 36.75;
             }
             to {
                 stroke-dashoffset: 73.5;
+            }
+        }
+
+        @keyframes path-bg {
+            35% {
+                stroke-opacity: 0;
+            }
+            100% {
+                stroke-opacity: 0.30;
             }
         }
 
@@ -109,15 +125,28 @@
                 stroke-dashoffset: 0;
             }
         }
-        
-
     </style>
 </head>
 
 <body>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 300 249" width="300" height="249">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 150 150" width="150" height="150">
+    
+    
+                
+    <path class="path-bg" id="motionPath1" d="M7.26 42.13L7.26 5.38"></path>
+    <path class="path-bg" id="motionPath2" d="M7.26 27.63L28.26 5.38"></path>
+    <path class="path-bg" id="motionPath3" d="M14.08 21.11L29.08 42.13"></path>
+    <path class="path-bg" id="motionPath4" d="M39.28 5.38L39.28 42.13"></path>
+    <path class="path-bg" id="motionPath5" d="M50.89 24.75L60.29 41.57"></path>
+    <path class="path-bg" id="motionPath6" d="M37.4 7.18C47.68 7.06 53.67 7.55 55.35 8.65C57.04 9.75 57.96 10.61 58.12 11.22C58.73 14.77 58.35 17.83 56.97 20.4C54.89 24.26 52.36 23.16 50.98 23.71C50.06 24.08 46.38 24.08 39.93 23.71"></path>
+    
+    
     <defs>
-        
+       
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7" />
+    </filter>
+       
         <path class="path1" d="M7.26 42.13L7.26 5.38" id="e13M2tdvEe"></path>
         <path class="path2" d="M7.26 27.63L28.26 5.38" id="cbym9hSIV"></path>
         <path class="path3" d="M14.08 21.11L29.08 42.13" id="a10SN11RUa"></path>
@@ -126,7 +155,133 @@
         <path class="path6" d="M37.4 7.18C47.68 7.06 53.67 7.55 55.35 8.65C57.04 9.75 57.96 10.61 58.12 11.22C58.73 14.77 58.35 17.83 56.97 20.4C54.89 24.26 52.36 23.16 50.98 23.71C50.06 24.08 46.38 24.08 39.93 23.71" id="dozJ7xUKF"></path>
     
     </defs>
-    <g><g><g><g><use xlink:href="#e13M2tdvEe" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#cbym9hSIV" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#a10SN11RUa" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#c2cgQ90Qvp" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#ap6q50CAm" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#dozJ7xUKF" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="2" stroke-opacity="1"></use></g></g></g></g></svg>
+    <g><g><g><g><use xlink:href="#e13M2tdvEe" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g><g><g><use xlink:href="#cbym9hSIV" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g><g><g><use xlink:href="#a10SN11RUa" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g><g><g><use xlink:href="#c2cgQ90Qvp" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g><g><g><use xlink:href="#ap6q50CAm" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g><g><g><use xlink:href="#dozJ7xUKF" opacity="1" fill-opacity="0" stroke="#fff" stroke-width="1" stroke-opacity="0.7"></use></g></g></g></g>
+<!--    filter="url(#f1)"-->
+<!--  keySplines="0 0 .58 1" -->
+    
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle1"/>
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle2"/>
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle3"/>
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle4"/>
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle5"/>
+    <circle r="1.35" fill="#fff" opacity="1" filter="url(#f1)" id="circle6"/>
+   <animate
+      xlink:href="#circle1"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle1"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyPoints="1;0"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath1" />
+    </animateMotion>
+    
+       <animate
+      xlink:href="#circle2"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle2"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyPoints="1;0"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath2" />
+    </animateMotion>
+    
+       <animate
+      xlink:href="#circle3"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle3"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath3" />
+    </animateMotion>
+    
+       <animate
+      xlink:href="#circle4"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle4"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath4" />
+    </animateMotion>
+    
+       <animate
+      xlink:href="#circle5"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle5"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath5" />
+    </animateMotion>
+    
+       <animate
+      xlink:href="#circle6"
+            attributeName="opacity" 
+           from="1"
+           to="0.2"
+           dur="2s"
+           repeatCount="indefinite"/>
+    <animateMotion 
+           xlink:href="#circle6"
+           dur="2s"
+           begin="0s"
+           repeatCount="indefinite"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath6" />
+    </animateMotion>
+    
+    </svg>
 
     <script>
         var path1 = document.querySelector('.path1');
@@ -147,7 +302,6 @@
         console.log(length4);
         console.log(length5);
         console.log(length6);
-
     </script>
 </body>
 
