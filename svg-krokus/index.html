@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+.path1 {
+  stroke-dasharray: 452;
+  stroke-dashoffset: 452;
+  animation: dash1 2s ease-out forwards;
+}
+
+@keyframes dash1 {
+  from {
+    stroke-dashoffset: 452;
+  }
+  to {
+    stroke-dashoffset: 904;
+  }
+}
+        
+.path2 {
+  stroke-dasharray: 239;
+  stroke-dashoffset: 239;
+  animation: dash2 2s ease-out forwards;
+    
+}
+
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 239;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+        
+.path3 {
+  stroke-dasharray: 262;
+  stroke-dashoffset: 262;
+  animation: dash3 2s ease-out forwards;
+}
+
+@keyframes dash3 {
+  from {
+    stroke-dashoffset: 262;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="573" height="573">
+   
+    <path class="path1" d="M109.02 453.37L109.02 1.8" opacity="1" fill="#454545" fill-opacity="1" stroke="#000000" stroke-width="9" stroke-opacity="1"></path>
+    <path class="path2" d="M216.35 1.8L109.02 215.05" opacity="1" stroke="#0b0b0b" stroke-width="9" stroke-opacity="1"></path>
+    <path class="path3" d="M216.35 453.37L109.02 215.05" opacity="1" stroke="#0b0b0b" stroke-width="9" stroke-opacity="1"></path>
+    </svg>
+
+    <script>
+        var path1 = document.querySelector('.path1');
+        var path2 = document.querySelector('.path2');
+        var path3 = document.querySelector('.path3');
+        var length1 = path1.getTotalLength();
+        var length2 = path2.getTotalLength();
+        var length3 = path3.getTotalLength();
+        console.log(length1);
+        console.log(length2);
+        console.log(length3);
+
+    </script>
+</body>
+
+</html>
