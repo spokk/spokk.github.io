@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        svg {
+            align-self: center;
+            padding: 15px;
+            transform: scale(1.6);
+        }
+
+        #qwe {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: path1 8s ease-out forwards infinite;
+        }
+
+        @keyframes path1 {
+            from {
+                stroke-dashoffset: 1000;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <svg style="" width="430px" height="130px">
+       <path stroke="#000" stroke-width="3px" d="M0 0 v100">
+            <animation></animation>
+       </path>
+       <path stroke="#000" stroke-width="3px" d="M40 0 l-40 50"></path>
+       <path stroke="#000" stroke-width="3px" d="M9 39 l30 60"></path>
+       
+       <path stroke="#000" stroke-width="3px" d="M60 0 v100"></path>
+       <path stroke="#000" stroke-width="3px" fill="none" d="M80 0
+           L60 0 L80 0
+           A20, 20 0 1, 1 80, 50
+           L60 50 L80 50"></path>
+        <path stroke="#000" stroke-width="3px" d="M89 49 L110,100"></path>
+        
+        <path stroke="#000" stroke-width="3px" fill="none" d="M160 0 A25, 30 0 1, 1 160, 100
+         A25, 30 0 1, 1 160, 0
+        "></path>
+        
+        
+       <path stroke="#000" stroke-width="3px" d="M220 0 v100"></path>
+       <path stroke="#000" stroke-width="3px" d="M260 0 l-40 50"></path>
+       <path stroke="#000" stroke-width="3px" d="M229 39 l30 60"></path>
+       
+        <path stroke="#000" stroke-width="3px" fill="none" d="M280 0 v70
+        a20, 20 0 0, 0 60, 0
+        v-70"></path>
+  
+  <path stroke="#000" stroke-width="3" fill="none" stroke="black" style="transform: translate(-70px,-10px) scale(1.2)"
+  d="M400 30
+  A20 20 0 1 0 380 50 
+  A20 20 0 1 1 360 70" />
+
+   </svg>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            var path = $("path");
+            var iter, vector, length;
+            for (iter = 0; iter < path.length; iter++) {
+                length = path[iter].getTotalLength();
+                $(path[iter]).attr('data-length', length).css({
+                    'stroke-dashoffset': length,
+                    'stroke-dasharray': length
+                });
+                $(path[iter]).animate({
+                    'stroke-dashoffset': 0
+                }, 1500);
+                console.log(length);
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
