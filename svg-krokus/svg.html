@@ -10,26 +10,35 @@
             justify-content: center;
             height: 100vh;
             overflow: hidden;
+            background: #222;
         }
 
         svg {
             align-self: center;
             padding: 15px;
-            transform: scale(1.6);
+            fill: #ddd;
+            background: #222;
         }
 
-        #qwe {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: path1 8s ease-out forwards infinite;
+        svg path {
+            stroke: #fff;
         }
 
-        @keyframes path1 {
-            from {
-                stroke-dashoffset: 1000;
+        .path-bg {
+            stroke: #999;
+            stroke-width: 1.5px;
+            animation: path-bg 1.5s ease-out forwards;
+        }
+
+        @keyframes path-bg {
+            0% {
+                opacity: 0;
             }
-            to {
-                stroke-dashoffset: 0;
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: .3;
             }
         }
 
@@ -38,42 +47,323 @@
 
 <body>
     <svg style="" width="430px" height="130px">
-       <path stroke="#000" stroke-width="3px" d="M0 0 v100">
-            <animation></animation>
+<!--    path bg grey-->
+       <path class="path-bg" d="M0 0 v100">
        </path>
-       <path stroke="#000" stroke-width="3px" d="M40 0 l-40 50"></path>
-       <path stroke="#000" stroke-width="3px" d="M9 39 l30 60"></path>
+       <path class="path-bg" d="M40 0 l-40 50"></path>
+       <path class="path-bg" d="M9 39 l30 60"></path>
        
-       <path stroke="#000" stroke-width="3px" d="M60 0 v100"></path>
-       <path stroke="#000" stroke-width="3px" fill="none" d="M80 0
+       <path class="path-bg" d="M60 0 v100"></path>
+       <path class="path-bg" fill="none" d="M58.5 0
            L60 0 L80 0
            A20, 20 0 1, 1 80, 50
            L60 50 L80 50"></path>
-        <path stroke="#000" stroke-width="3px" d="M89 49 L110,100"></path>
+        <path class="path-bg" d="M89 49 L110,100"></path>
         
-        <path stroke="#000" stroke-width="3px" fill="none" d="M160 0 A25, 30 0 1, 1 160, 100
+        <path class="path-bg" fill="none" d="M160 0 A25, 30 0 1, 1 160, 100
          A25, 30 0 1, 1 160, 0
         "></path>
         
         
-       <path stroke="#000" stroke-width="3px" d="M220 0 v100"></path>
-       <path stroke="#000" stroke-width="3px" d="M260 0 l-40 50"></path>
-       <path stroke="#000" stroke-width="3px" d="M229 39 l30 60"></path>
+       <path class="path-bg" d="M220 0 v100"></path>
+       <path class="path-bg" d="M260 0 l-40 50"></path>
+       <path class="path-bg" d="M229 39 l30 60"></path>
        
-        <path stroke="#000" stroke-width="3px" fill="none" d="M280 0 v70
+        <path class="path-bg" fill="none" d="M280 0 v70
         a20, 20 0 0, 0 60, 0
         v-70"></path>
   
-  <path stroke="#000" stroke-width="3" fill="none" stroke="black" style="transform: translate(-70px,-10px) scale(1.2)"
+  <path class="path-bg" fill="none" stroke="black" style="transform: translate(-70px,-10px) scale(1.2)"
   d="M400 30
   A20 20 0 1 0 380 50 
   A20 20 0 1 1 360 70" />
+<!--path bg gray end -->
+<!--      path letters-->
+       <path stroke-width="3px" id="motionPath1" class="path" d="M0 0 v100">
+       </path>
+       <path stroke-width="3px" id="motionPath2" class="path" d="M40 0 l-40 50"></path>
+       <path stroke-width="3px" id="motionPath3" class="path" d="M9 39 l30 60"></path>
+       
+       <path stroke-width="3px" id="motionPath4" class="path" d="M60 0 v100"></path>
+       <path stroke-width="3px" id="motionPath5" class="path" fill="none" d="M58.5 0
+           L60 0 L80 0
+           A20, 20 0 1, 1 80, 50
+           L60 50 L80 50"></path>
+        <path stroke-width="3px" id="motionPath6" class="path" d="M89 49 L110,100"></path>
+        
+        <path stroke-width="3px" id="motionPath7" class="path" fill="none" d="M160 0 A25, 30 0 1, 1 160, 100
+         A25, 30 0 1, 1 160, 0
+        "></path>
+        
+        
+       <path stroke-width="3px" id="motionPath8" class="path" d="M220 0 v100"></path>
+       <path stroke-width="3px" id="motionPath9" class="path" d="M260 0 l-40 50"></path>
+       <path stroke-width="3px" id="motionPath10" class="path" d="M229 39 l30 60"></path>
+       
+        <path stroke-width="3px" id="motionPath11" class="path" fill="none" d="M280 0 v70
+        a20, 20 0 0, 0 60, 0
+        v-70"></path>
+  
+  <path stroke-width="3" id="motionPath" class="path" fill="none" stroke="black" style="transform: translate(-70px,-10px) scale(1.2)"
+  d="M400 30
+  A20 20 0 1 0 380 50 
+  A20 20 0 1 1 360 70" />
+   <!--      path letters-->
+   
+<!--   circles. filter and animation -->
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+  
+   <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle1"/>
+      <animate
+      xlink:href="#circle1"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle1"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath2" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle2"/>
+      <animate
+      xlink:href="#circle2"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle2"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath2" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle3"/>
+      <animate
+      xlink:href="#circle3"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle3"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath3" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle4"/>
+      <animate
+      xlink:href="#circle4"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle4"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath4" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle5"/>
+      <animate
+      xlink:href="#circle5"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle5"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath5" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle6"/>
+      <animate
+      xlink:href="#circle6"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle6"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath6" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle7"/>
+      <animate
+      xlink:href="#circle7"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle7"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath7" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle8"/>
+      <animate
+      xlink:href="#circle8"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle8"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath8" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle9"/>
+      <animate
+      xlink:href="#circle9"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle9"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath9" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle10"/>
+      <animate
+      xlink:href="#circle10"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle10"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath10" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle11"/>
+      <animate
+      xlink:href="#circle11"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle11"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath11" />
+    </animateMotion>
+       <circle r="3.7" fill="#fff" opacity="0" filter="url(#f1)" id="circle12"/>
+      <animate
+      xlink:href="#circle12"
+            attributeName="opacity" 
+           from="0.7"
+           to="0"
+           dur="1.5s"
+           repeatCount="1"/>
+    <animateMotion 
+           xlink:href="#circle12"
+           dur="1.5s"
+           begin="0s"
+           fill="freeze"
+           keyPoints="0;1"
+           keyTimes="0;1" 
+           keySplines="0 0 .59 1"
+           calcMode="spline"
+           >
+    <mpath xlink:href="#motionPath12" />
+    </animateMotion>
+    
+<!--    circles and etc end-->
 
    </svg>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="jsbiz.js"></script>
     <script>
         window.onload = function() {
-            var path = $("path");
+            var path = $(".path");
             var iter, vector, length;
             for (iter = 0; iter < path.length; iter++) {
                 length = path[iter].getTotalLength();
@@ -83,12 +373,9 @@
                 });
                 $(path[iter]).animate({
                     'stroke-dashoffset': 0
-                }, 1500);
+                }, 1500, $.bez([0, 0, .59, 1]));
                 console.log(length);
             }
-
-
-
         }
 
     </script>
