@@ -13,11 +13,11 @@ $(document).ready(function () {
                 });
             } else if (index == 3) {
                 $('.bottle-block').css({
-                    'transform': 'translateX(80%) translateY(0%) scale(1.2)'
+                    'transform': 'translateX(80%) translateY(-5%) scale(1.2)'
                 });
             } else if (index == 4) {
                 $('.bottle-block').css({
-                    'transform': 'translateX(130%) translateY(80%) scale(1)'
+                    'transform': 'translateX(125%) translateY(80%) scale(1)'
                 });
             }
         },

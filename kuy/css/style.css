@@ -20,5 +20,5 @@
     transform: translateX(215%) translateY(0%) scale(3);
     height: 100vh;
 /*    border: 2px dotted black;*/
-    transition: all 1s;
+    transition: all 1s ease;
 }
