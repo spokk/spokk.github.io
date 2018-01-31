@@ -30,7 +30,7 @@
 }
 
 .bottle-block {
-    background: url(../img/bottle-cap.png) 50% 50% no-repeat;
+    background: url(../img/bottle-cap1.png) 50% 50% no-repeat;
     background-size: contain;
     position: fixed;
     z-index: 1;
