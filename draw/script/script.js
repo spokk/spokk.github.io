@@ -11,3 +11,16 @@ $(function () {
     });
 }); /*delete mobile toggle when resize*/
 /*mobile menu end*/
+
+
+(function anchor_scroll() { //anchor scroll
+    var menu = $('.header-nav');
+    menu.on("click", "a[href='#contacts']", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 750);
+    });
+}());
+
+

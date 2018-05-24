@@ -52,7 +52,7 @@
          display: -ms-flexbox;
          display: flex;
      }
-     header nav ul li {
+     header nav ul li a {
          padding: 8px 0;
      }
      header nav ul li:hover {
