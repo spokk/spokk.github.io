@@ -33,13 +33,13 @@
                     <span></span>
                 </div>
                 <ul>
-                    <li class="nav-active">
+                    <li>
                         <a href="../index.html">Головна</a>
                     </li>
                     <li>
                         <a href="lessons.html">Уроки</a>
                     </li>
-                    <li>
+                    <li class="nav-active">
                         <a href="articles.html">Статті</a>
                     </li>
                     <li>
@@ -110,7 +110,8 @@
                                 <p class="article__text">2. Не смійте критикувати творіння вашого маленької дитини! Якщо ви будете постійно лаяти
                                     його з цього приводу, можете не сумніватися, любов до малювання пропаде зовсім швидко,
                                     можливо, навіть і не з’явившись. Дитина є дитина, роботи його неідеальні, але в них вкладена
-                                    душа.</p>
+                                    душа.
+                                </p>
                             </li>
                             <li>
                                 <p class="article__text">3. Не треба домалювати малюнки вашого чада, ні під яким приводом. Не робіть це навіть для
@@ -175,12 +176,14 @@
     <script src="../script/readmore.min.js"></script>
     <script src="../script/script.js"></script>
     <script>
-        $('.readmore').readmore({ //вызов плагина
-            speed: 350, //скорость анимации показать скрыть текст
-            collapsedHeight: 130, //высота блока краткого текста в px
-            heightMargin: 16,
-            moreLink: '<a href="#" class="readmore_link">Читати повністью</a>', //Ссылка на раскрытие блока
-            lessLink: '<a href="#" class="readmore_link">Закрити</a>' //Ссылка на скрытие блока
+        $(document).ready(function () {
+            $('.readmore').readmore({ //вызов плагина
+                speed: 350, //скорость анимации показать скрыть текст
+                collapsedHeight: 130, //высота блока краткого текста в px
+                heightMargin: 16,
+                moreLink: '<a href="#" class="readmore_link">Читати повністью</a>', //Ссылка на раскрытие блока
+                lessLink: '<a href="#" class="readmore_link">Закрити</a>' //Ссылка на скрытие блока
+            });
         });
     </script>
 </body>
