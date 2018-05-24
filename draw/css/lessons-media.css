@@ -1,47 +1,47 @@
- @media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {}
 
- @media only screen and (max-width: 992px) {
-     .lessons .picture-block {
-         width: 48%;
-     }
+@media only screen and (max-width: 992px) {
+    .lessons .picture-block {
+        width: 48%;
+    }
 }
 
- @media only screen and (max-width: 786px) {
-     .lessons {
-         padding: 20px 0;
-     }
-     .lessons h2 {
-         text-align: center;
-         font-size: 36px;
-     }
-     .lesson img {
-         width: 100%;
-     }
-     .lesson p {
-         padding: 20px 5%;
-         font-size: 18px;
-     }
-     .lesson h3 {
-         font-size: 28px;
-         padding: 10px 0;
-     }
-     .lessons .picture-block{
-         width: 100%;
-     }
-     .lesson .page-block {
-         width: 100%;
-     }
-     .lesson {
-         padding: 10px 0 40px 0;
-     }
- }
-
- @media only screen and (max-width: 580px) {
-          .lesson .page-block a{
-        display: block;
-     }
+@media only screen and (max-width: 786px) {
+    .lessons {
+        padding: 20px 0;
+    }
+    .lessons h2 {
+        text-align: center;
+        font-size: 36px;
+    }
+    .lesson img {
+        width: 100%;
+    }
+    .lesson p {
+        padding: 20px 5%;
+        font-size: 18px;
+    }
+    .lesson h3 {
+        font-size: 28px;
+        padding: 10px 0;
+    }
+    .lessons .picture-block{
+        width: 100%;
+    }
+    .lesson .page-block {
+        width: 100%;
+    }
+    .lesson {
+        padding: 10px 0 40px 0;
+    }
 }
 
- /* Extra Small Devices, Phones */
+@media only screen and (max-width: 580px) {
+         .lesson .page-block a{
+       display: block;
+    }
+}
 
- @media only screen and (max-width: 320px) {}
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 320px) {}

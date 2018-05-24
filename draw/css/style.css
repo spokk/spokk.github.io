@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
 }
@@ -29,6 +30,8 @@ strong {
     max-width: 1170px;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
 }
 
@@ -38,9 +41,12 @@ header .header-info {
     margin: 0 auto;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     height: 115px;
 }
 
@@ -83,7 +89,8 @@ header {
     color: #fff;
     font-size: 24px;
     -ms-flex-item-align: end;
-    align-self: flex-end;
+    -webkit-align-self: flex-end;
+            align-self: flex-end;
 }
 
 .tel a {
@@ -97,20 +104,31 @@ header {
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+            justify-content: center;
     display: block;
     -webkit-transform: translate(0, 38px);
-    transform: translate(0, 38px)
+    -moz-transform: translate(0, 38px);
+         transform: translate(0, 38px)
 }
 
 header nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 header nav ul li {
@@ -123,12 +141,15 @@ header nav ul li {
     font-size: 24px;
     text-transform: capitalize;
     -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
     transition: .3s;
 }
 
 .nav-active {
     -webkit-transform: rotate(-6deg);
-    transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+         transform: rotate(-6deg);
 }
 
 header nav ul li:nth-child(1) a {
@@ -153,7 +174,8 @@ header nav ul li:nth-child(5) a {
 
 header nav ul li:hover {
     -webkit-transform: rotate(-6deg);
-    transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+         transform: rotate(-6deg);
 }
 
 header nav ul li a {
@@ -197,7 +219,10 @@ main .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+            flex-direction: column;
 }
 
 .main-tallent p {
@@ -207,7 +232,8 @@ main .container {
 
 .main-tallent a {
     -ms-flex-item-align: start;
-    align-self: flex-start;
+    -webkit-align-self: flex-start;
+            align-self: flex-start;
     margin-top: 20px;
     color: #fff;
     font-size: 33px;
@@ -216,6 +242,8 @@ main .container {
     background: #4b68e7;
     border-radius: 16px;
     -webkit-transition: .4s;
+    -o-transition: .4s;
+    -moz-transition: .4s;
     transition: .4s;
 }
 
@@ -291,12 +319,17 @@ main .container {
 .articles ul {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+            justify-content: space-between;
 }
 
 .articles li {
@@ -319,6 +352,9 @@ main .container {
     color: #fff;
     font-size: 16px;
     opacity: .7;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -moz-transition: all .4s ease;
     transition: all .4s ease;
 }
 .articles a.readmore:hover{
@@ -364,19 +400,28 @@ main .container {
 .pictures .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+            flex-direction: row;
 }
 
 .pictures .see_all_pics{
     border-radius: 16px;
     background: #87c82a;
     padding: 32px 30px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -moz-transition: 0.3s;
     transition: 0.3s;
     font: 600 24px/25px "Raleway", sans-serif;
     color: #fff;
@@ -386,10 +431,26 @@ main .container {
     background: #0ec7a7;
 }
 .pictures .img_container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .pictures img {
@@ -399,12 +460,16 @@ main .container {
     max-width: 370px;
     border-radius: 16px;
     -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
     transition: .3s;
 }
 
 .pictures img:hover {
     cursor: pointer;
-    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+       -moz-transform: scale(1.06);
+            transform: scale(1.06);
 }
 
 /*MAIN PICTURES END*/
@@ -448,6 +513,8 @@ footer p {
 footer a {
     color: #15dbf3;
     -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
     transition: .3s;
     font-weight: 600;
     font-size: 28px;
