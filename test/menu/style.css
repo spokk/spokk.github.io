@@ -3,11 +3,11 @@ body{
     padding: 0;
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 header{
     position: fixed;
-    height: 100px;
+    height: 80px;
     top: 0;
     background: yellow;
     width: 100%;
@@ -32,40 +32,32 @@ header input[type=checkbox]{
 header input[type="checkbox"]:hover{
     cursor: pointer;
 }
-header input[type="checkbox"]:checked+button span:nth-child(1){
-    transform: translate(-4px,9px) rotate(45deg);
-}
-header input[type="checkbox"]:checked+button span:nth-child(2){
-    opacity: 0;
-}
-header input[type="checkbox"]:checked+button span:nth-child(3){
-    transform: translate(-4px,-9px) rotate(-45deg);
-}
+
 header button{
     background: none;
     border: none;
     margin-left: 30px;
+    transition: all .6s ease;
+    transform-origin: 50% 50%;
 }
 header button span{
     display: block;
     width: 100%;
     height: 4px;
+    line-height: 9px;
     margin-bottom: 5px;
     background: #000;
     transition: all .6s ease;
 }
-
-header input[type="checkbox"]:checked + button + ul li{
-    transform: none;
-}
-header input[type="checkbox"]:checked + button + ul{
-    background: yellow;
+header button span:last-child{
+    margin-bottom: 0;
 }
 
 header ul{
     padding: 0;
     margin: 0 auto;
     display: flex;
+    visibility: hidden;
     width: 100%;
     height: 100vh;
     flex-direction: column;
@@ -77,16 +69,13 @@ header ul li{
     list-style: none;
     width: 100%;
     text-align: center;
-    background: red;
-    transition: all .6s ease-in-out;
+    transition: all .6s cubic-bezier(.25,.75,.5,1.25);
 }
 
 header ul li:nth-child(even){
-    background: yellow;
     transform: translateX(-100%);
 }
 header ul li:nth-child(odd){
-    background:yellow;
     transform: translateX(+100%);
 }
 header ul li a{
@@ -98,8 +87,31 @@ header ul li a{
     line-height: 2;
     color:#000;
 }
-main{
+header input[type="checkbox"]:checked+button{
+    transform: scale(1.4);
 }
+header input[type="checkbox"]:checked{
+    transform: scale(1.4);
+}
+header input[type="checkbox"]:checked+button span:nth-child(1){
+    transform: translate(-4px,9px) rotate(45deg);
+}
+header input[type="checkbox"]:checked+button span:nth-child(2){
+    opacity: 0;
+}
+header input[type="checkbox"]:checked+button span:nth-child(3){
+    transform: translate(-4px,-9px) rotate(-45deg);
+}
+
+header input[type="checkbox"]:checked + button + ul li{
+    transform: none;
+    background: yellow;
+}
+header input[type="checkbox"]:checked + button + ul{
+    background: yellow;
+    visibility: visible;
+}
+
 main p{
     max-width: 300px;
     margin: 0 auto;
