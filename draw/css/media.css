@@ -220,6 +220,13 @@
     .pictures h5 span {
         font-size: 46px;
     }
+    .pictures .img_container{
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
     .pictures img {
         width: 88%;
     }
