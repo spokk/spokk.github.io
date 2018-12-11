@@ -829,7 +829,8 @@ button {
           border-width: 3px 3px 0 0;
           background: rgba(0, 0, 0, 0.1); }
     .section-brand__container .slick-slide {
-      margin: 0 30px; }
+      margin: 0 30px;
+      height: auto; }
     .section-brand__container .brand-block img {
       object-position: center;
       width: 100%;
