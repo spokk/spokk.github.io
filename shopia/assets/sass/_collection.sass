@@ -1,0 +1,103 @@
+.section-collection
+  margin-bottom: 130px
+  @media (max-width: 991px)
+    margin-bottom: 30px
+  &__container
+    padding: 15px
+    border: 1px solid #eaeaea
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(250px,auto))
+    grid-gap: 15px 20px
+    .collection-block
+      position: relative
+      &:hover
+        .collection-block__info
+          opacity: 1
+        .sale-label
+          transform: rotate(360deg)
+      img
+        object-position: center
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .sale-label
+        position: absolute
+        width: 60px
+        height: 60px
+        padding: 12px 0 0 5px
+        text-align: center
+        color: #fff
+        font-size: 23px
+        left: 18px
+        top: 18px
+        background-color: #feab12
+        border-radius: 50%
+        z-index: 1
+        transition: transform .3s ease
+        small
+          font-size: 11px
+          vertical-align: super
+      &__info
+        opacity: 0
+        display: flex
+        justify-content: center
+        background: rgba(0,0,0,.55)
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        transition: opacity .3s ease
+        .button--collection-trapezium
+          align-self: flex-end
+          height: 44px
+          width: 118px
+          font-size: 14px
+          background-color: #000
+          position: relative
+          &:hover
+            color: #fff
+            background-color: #f09d66
+            &:after
+              border-color: transparent transparent #f09d66 transparent
+            &:before
+              border-color: transparent transparent transparent #f09d66
+          &:after
+            content: ''
+            position: absolute
+            display: block
+            left: -44px
+            top: 0
+            border-style: solid
+            border-width: 0 0 44px 44px
+            border-color: transparent transparent #000 transparent
+            transition: all .3s ease
+          &:before
+            content: ''
+            position: absolute
+            display: block
+            right: -44px
+            top: 0
+            border-style: solid
+            border-width: 44px 0 0 44px
+            border-color: transparent transparent transparent #000
+            transition: all .3s ease
+        //.sale-label
+        //  position: absolute
+        //  width: 60px
+        //  height: 60px
+        //  padding: 12px 0 0 5px
+        //  text-align: center
+        //  color: #fff
+        //  font-size: 23px
+        //  left: 18px
+        //  top: 18px
+        //  background-color: #feab12
+        //  border-radius: 50%
+        //  small
+        //    font-size: 11px
+        //    vertical-align: super
+

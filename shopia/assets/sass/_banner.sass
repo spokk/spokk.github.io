@@ -1,0 +1,141 @@
+.section-banner
+  min-height: 600px
+  height: 100%
+  max-height: calc(100vh - 168px)
+  overflow: hidden
+  position: relative
+  margin-bottom: 65px
+  @media (max-width: 991px)
+    max-height: calc(100vh - 40px)
+    margin-bottom: 30px
+  .slick
+    &-slide
+      outline: 0
+      img
+        width: 100vw
+        object-fit: cover
+        min-height: 600px
+        height: calc(100vh - 168px)
+        @media (max-width: 991px)
+          height: calc(100vh - 40px)
+    &-slider
+      min-height: 600px
+      height: calc(100vh - 168px)
+      @media (max-width: 991px)
+        height: calc(100vh - 40px)
+      .slick-dots
+        padding: 0
+        margin: 0
+        list-style-type: none
+        display: flex
+        position: absolute
+        bottom: 40px
+        left: 50%
+        transform: translateX(-50%)
+        li
+          margin-right: 18px
+          font-size: 0
+          background: #b2b2b2
+          width: 14px
+          height: 14px
+          transform: rotate(45deg)
+          border: none
+          transition: background .4s ease, transform .4s ease
+          opacity: .8
+          &:hover
+            cursor: pointer
+            background: $golden-hover
+          &.slick-active
+            background: #000
+            transform: rotate(405deg)
+          button
+            visibility: hidden
+
+
+  .sale-block
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 277px
+    height: 390px
+    transform: translate(-50%,-50%)
+    background: transparent
+    z-index: 1
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    &__text-wrap
+      border: 2px solid #fff
+      text-align: center
+      text-transform: uppercase
+      padding-top: 28px
+      height: 276px
+      transition: all .4s ease-out
+      &:hover
+        background: #f09d66
+        border-color: #000
+        &:after
+          border-color: #000
+        p:nth-child(3)
+          .decor-line
+            width: 34px
+            &:after
+              width: 60px
+      p
+        padding: 0
+        line-height: 1
+      p:nth-child(1)
+        font-size: 19px
+        font-weight: 700
+        color: #fff
+      p:nth-child(2)
+        font-size: 59px
+        font-weight: 700
+        color: #000
+        margin-bottom: 38px
+      p:nth-child(3)
+        font-size: 20px
+        font-weight: 700
+        color: #fff
+        margin-bottom: 34px
+        .decor-line
+          display: inline-block
+          width: 60px
+          height: 1px
+          margin: 0 10px
+          background: #fff
+          position: relative
+          transition: all .4s ease-out
+          &:after
+            content: ''
+            height: 1.5px
+            width: 34px
+            display: block
+            background: #fff
+            position: absolute
+            top: -7px
+            opacity: .8
+            transition: all .4s ease-out
+          &:nth-child(1)
+            &:after
+              right: 0
+      p:nth-child(4)
+        font-size: 31px
+        font-weight: 700
+        color: #000
+        margin-bottom: 28px
+      &:after
+        content: ''
+        width: 260px
+        height: 260px
+        position: absolute
+        display: block
+        left: 8px
+        top: 8px
+        border: 2px solid #fff
+        transition: all .4s ease-out
+    &__sale-btn
+      margin: 0 auto
+      &:hover
+        cursor: pointer
+        color: #000

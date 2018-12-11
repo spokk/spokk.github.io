@@ -1,0 +1,156 @@
+@font-face
+  font-family: 'Krinkes Decor PERSONAL USE'
+  src: url('../fonts/KrinkesDecorPERSONAL.eot?') format("eot"), url('../fonts/KrinkesDecorPERSONAL.woff') format("woff"), url('../fonts/KrinkesDecorPERSONAL.ttf') format("truetype"), url('../fonts/KrinkesDecorPERSONAL.svg#KrinkesDecorPERSONALUSE') format("svg")
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+
+body
+  background: #fff
+  font-size: 14px
+  color: #000
+  font-family: 'Lato', sans-serif
+  margin: 0
+  padding: 0
+  min-width: 320px
+
+::selection
+  background: $golden-hover
+  color: #fff
+  text-shadow: none
+html
+  ::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  ::-webkit-scrollbar //цвет скрола
+    background: none
+  ::-webkit-scrollbar-thumb //цвет плашки скрола
+    background-color: $golden-hover
+
+h1.brand
+  font-family: "Krinkes Decor PERSONAL USE", sans-serif
+
+a
+  transition: color .3s ease
+  &:hover
+    color: $golden-hover
+
+button
+  transition: all .3s ease
+
+.section
+  max-width: 1300px
+  margin: 0 auto
+  &-fluid
+    max-width: none
+    margin: 0
+
+.button
+  width: 189px
+  height: 53px
+  background-color: #f09d66
+  color: #ffffff
+  font-size: 24px
+  font-weight: 700
+  text-transform: uppercase
+  border: none
+  &:hover
+    cursor: pointer
+    color: #000
+
+.header-rombs
+  font-family: "Playfair Display", serif
+  font-size: 30px
+  font-weight: 700
+  font-style: italic
+  text-align: center
+  margin-bottom: 60px
+  position: relative
+  @media (max-width: 991px)
+    margin-bottom: 30px
+  @media (max-width: 767px)
+    font-size: 24px
+  &:before
+    content: ''
+    height: 1px
+    width: 35%
+    max-width: 400px
+    background-color: #eaeaea
+    position: absolute
+    bottom: calc(50% - 3px)
+    left: 0
+    display: block
+    z-index: -1
+  &:after
+    content: ''
+    height: 1px
+    width: 35%
+    max-width: 400px
+    background-color: #eaeaea
+    position: absolute
+    bottom: calc(50% - 3px)
+    right: 0
+    display: block
+    z-index: -1
+  i
+    transform: rotate(45deg) translateY(-6px)
+    font-size: 14px
+    margin: 0 90px
+    color: #d9bf8f
+    &:last-child
+      transform: rotate(-45deg) translateY(-6px)
+    @media (max-width: 767px)
+      margin: 0 15px
+
+.button-scroll
+  width: 30px
+  height: 30px
+  background: #000 url('../static/img/arrow-top.png') center/16px no-repeat
+  color: #fff
+  border-radius: 4px
+  z-index: 1000
+  position: fixed
+  bottom: 30px
+  right: 30px
+  transition: all 0.1s linear, background .3s ease
+  transform: translateY(95px)
+  text-align: center
+  &:hover
+    background-color: $golden-hover
+
+
+.button-scroll-display
+  display: block
+  transform: translateY(0px)!important
+
+//altered bootstrap classes
+
+//header currency dropdown
+.dropdown
+  &.show
+    button.btn:after
+      transform: rotate(180deg)
+  button.btn
+    background: #000
+    border-radius: 0
+    &:focus
+      box-shadow: none!important
+      background: #000
+    &:after
+      transition: transform .2s ease
+    &:hover
+      background-color: $golden-hover
+      color: #000
+  &-menu
+    min-width: 75px!important
+    max-width: 75px!important
+    text-align: center
+  &-item
+    padding: 0!important
+    transition: background .3s ease-in
+    &:hover
+      background: $golden-hover
+
+.navbar-light .navbar-toggler
+  border: none
