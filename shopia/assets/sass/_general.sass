@@ -68,7 +68,7 @@ button
   margin-bottom: 60px
   position: relative
   @media (max-width: 991px)
-    margin-bottom: 30px
+    margin-bottom: 40px
   @media (max-width: 767px)
     font-size: 24px
   &:before
@@ -82,6 +82,8 @@ button
     left: 0
     display: block
     z-index: -1
+    @media (max-width: 767px)
+      bottom: calc(50% - 1px)
   &:after
     content: ''
     height: 1px
@@ -93,6 +95,8 @@ button
     right: 0
     display: block
     z-index: -1
+    @media (max-width: 767px)
+      bottom: calc(50% - 1px)
   i
     transform: rotate(45deg) translateY(-6px)
     font-size: 14px
