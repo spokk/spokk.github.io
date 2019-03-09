@@ -6,6 +6,10 @@ window.onload = function () {
     var portfolio = document.getElementById("portfolio");
     var contacts = document.getElementById("contacts");
 
+    //navigation
+    var openMenuBtn = document.querySelector('.header-btn');
+    var menu = document.querySelector('.navbar__list');
+
     var aboutLink = document.querySelector('a[href="#about"]');
     var servicesLink = document.querySelector('a[href="#services"]');
     var portfolioLink = document.querySelector('a[href="#portfolio"]');
@@ -27,7 +31,6 @@ window.onload = function () {
     var portfolioHeight = portfolio.offsetHeight;
     // var contactsHeight = contacts.offsetHeight;
 
-    //проверка скрола и добавления бэкграунда хедеру
     function checkPosition() {
         var windowY = window.scrollY;
         if (windowY > 150 && !isWhite) {
@@ -37,10 +40,11 @@ window.onload = function () {
             isWhite = false;
             header.classList.remove('header--white');
         }
-    }
+    } //проверка скрола и добавления бэкграунда хедеру
 
     function checkSections() {
-        offsetToSection = window.scrollY + 74; // 74 is header height
+        offsetToSection = window.innerWidth > 991 ? window.scrollY + 74 : window.scrollY + 240;
+        // 74 is header height, 240 is mobile open header
 
         switch (true) {
             case offsetToSection > aboutOffset && offsetToSection < aboutOffset + aboutHeight:
@@ -63,7 +67,7 @@ window.onload = function () {
                 removeActiveClasses();
                 break;
         }
-    }
+    } //переключение активного состояния ссылки в меню по скролу
 
     function removeActiveClasses() {
         for (var i = 0; i < links.length; i++) {
@@ -86,16 +90,15 @@ window.onload = function () {
         }
     } //плавный скрол по якорям
 
+    function mobileToggle() {
+        menu.classList.toggle('mobileOpen');
+    } //откртыиие/закрытие меню на клик
+
     checkPosition(); //проверка положения страницы при загрузке
     smoothScrollToAnchors(); //плавный скрол по якорям
 
     window.addEventListener('scroll', checkPosition); //событие на скрол для бэкграунда хедера
     window.addEventListener('scroll', checkSections); //событие на скрол для смены активной ссылки в меню
 
-    //navigation
-    var openMenuBtn = document.querySelector('.header-btn');
-    var menu = document.querySelector('.navbar__list');
-    openMenuBtn.addEventListener('click', function () {
-        menu.classList.toggle('mobileOpen');
-    })
+    openMenuBtn.addEventListener('click', mobileToggle); // откртыиие/закрытие меню на клик
 };
