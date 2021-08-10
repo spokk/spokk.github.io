@@ -188,7 +188,8 @@ a {
   background-color: #074269;
 }
 
-.tab {
+.tab,
+.tabs a {
   color: #000;
 }
 
@@ -234,4 +235,20 @@ a {
 
 .breadcrumbs ol {
   display: flex;
+}
+
+.bg-blue {
+  background-color: #b8d7ff;
+}
+
+.button.is-primary {
+  background-color: #004d40;
+}
+
+.button.is-danger {
+  background-color: #a30021;
+}
+
+.button.is-success {
+  background-color: #0e5d2a;
 }

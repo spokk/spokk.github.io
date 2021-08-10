@@ -108,7 +108,7 @@
           <span aria-hidden="true">→</span>
         </li>
         <li>
-          <a href="#" aria-current="location">
+          <a href="#" aria-current="page">
             Current
           </a>
         </li>
@@ -318,7 +318,7 @@
       </div>
     </div>
 
-    <div class="hero is-info">
+    <div class="hero bg-blue">
       <div class="hero-body">
         <div class="container">
           <div class="title">List of topics</div>
@@ -336,7 +336,7 @@
           <li data-target="pane-3" id="3">
             <a href="#">
               <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
-              <span class="tab ">Team</span>
+              <span class="tab">Team</span>
             </a>
           </li>
           <li data-target="pane-4" id="4">
@@ -792,13 +792,13 @@
             <button class="button is-primary is-block is-alt is-large">New Post</button>
             <div class="menu">
               <ul class="menu-list forum-list">
-                <li><span class="tag is-primary is-medium">Dashboard</span></li>
-                <li><span class="tag is-link is-medium">Customers</span></li>
-                <li><span class="tag is-light is-danger is-medium">Authentication</span></li>
-                <li><span class="tag is-dark is-medium">Payments</span></li>
-                <li><span class="tag is-success is-medium">Transfers</span></li>
-                <li><span class="tag is-warning is-medium">Balance</span></li>
-                <li><span class="tag is-medium ">Question</span></li>
+                <li><button class="button is-primary is-medium">Dashboard</button></li>
+                <li><button class="button is-link is-medium">Customers</button></li>
+                <li><button class="button is-danger is-medium">Authentication</button></li>
+                <li><button class="button is-dark is-medium">Payments</button></li>
+                <li><button class="button is-success is-medium">Transfers</button></li>
+                <li><button class="button is-warning is-medium">Balance</button></li>
+                <li><button class="button is-medium">Question</button></li>
               </ul>
             </div>
           </div>
@@ -1193,14 +1193,18 @@
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a href="#"><i class="fab fa-github-alt fa-2x"></i><span class="visually-hidden">Github External
-              link</span></a>
-          <a href="#"><i class="fab fa-youtube fa-2x"></i><span class="visually-hidden">Youtube External link</span></a>
-          <a href="#"><i class="fab fa-facebook fa-2x"></i><span class="visually-hidden">Facebook External
-              link</span></a>
-          <a href="#"><i class="fab fa-twitter fa-2x"></i><span class="visually-hidden">Twitter External link</span></a>
+          <a href="#" target="_blank"><i class="fab fa-github-alt fa-2x"></i><span class="visually-hidden">Github. Will
+              open in a new tab.</span><i class="fas fa-external-link-alt"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i><span class="visually-hidden">Youtube. Will
+              open in a new tab</span><i class="fas fa-external-link-alt"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook fa-2x"></i><span class="visually-hidden">Facebook. Will
+              open in a new tab</span><i class="fas fa-external-link-alt"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class="visually-hidden">Twitter. Will
+              open in a new tab</span><i class="fas fa-external-link-alt"></i></a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT<i
+              class="fas fa-external-link-alt"><span class="visually-hidden">Will
+                open in a new tab</span></i></a>.</p>
       </div>
     </div>
   </footer>
@@ -1267,7 +1271,16 @@
   </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
-  <script src="https://cdn.disability.illinois.edu/skipto.min.js"></script>
+  <script defer src="https://cdn.disability.illinois.edu/skipto.min.js"></script>
+  <script defer>
+    var SkipToConfig = {
+      settings: {
+        skipTo: {
+          displayOption: 'popup',
+        }
+      }
+    };
+  </script>
   <script async src="js/custom.js"></script>
 </body>
 
