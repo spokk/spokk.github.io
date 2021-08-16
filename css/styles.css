@@ -252,3 +252,16 @@ a {
 .button.is-success {
   background-color: #0e5d2a;
 }
+
+#nav ul li {
+  margin: 0 6px;
+  padding: 6px;
+}
+
+#nav ul li button {
+  border-bottom: 0;
+}
+
+#nav li.is-active button {
+  border: 5px solid green;
+}
