@@ -1,3 +1,7 @@
+*:focus {
+  outline: 2px solid red !important;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
@@ -84,14 +88,13 @@
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
 }
 
-
 .has-same-height .card {
   height: 350px;
   overflow: hidden;
 }
 
 .skills-content .media + .media {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .skills-content .progress {
@@ -103,8 +106,8 @@
 }
 
 .info-tiles {
-  margin: .75rem auto;
-  padding: 0 .75rem;
+  margin: 0.75rem auto;
+  padding: 0 0.75rem;
 }
 
 .button.is-primary.is-alt {
@@ -118,7 +121,7 @@
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #E6EAEE;
+  border-bottom: 1px solid #e6eaee;
 }
 .post:last-child {
   padding-bottom: 0;
@@ -126,9 +129,8 @@
 }
 
 .forum-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
@@ -175,4 +177,78 @@ li {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+a {
+  color: #18448c;
+}
+
+.hero.is-info,
+.button.is-info {
+  background-color: #074269;
+}
+
+.tab,
+.tabs a {
+  color: #000;
+}
+
+.tab-active {
+  color: #0f5485;
+}
+
+.tag:not(body).is-danger {
+  background-color: #9e0020;
+}
+
+.tag:not(body).is-primary {
+  background-color: #005244;
+}
+
+.tag:not(body).is-success {
+  background-color: #0d5928;
+}
+
+.help.is-success {
+  color: #205601;
+}
+
+.help.is-danger {
+  color: #8f001d;
+}
+
+.key-feature-title,
+.key-feature-subtitle {
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.breadcrumbs ol {
+  display: flex;
+}
+
+.bg-blue {
+  background-color: #b8d7ff;
+}
+
+.button.is-primary {
+  background-color: #004d40;
+}
+
+.button.is-danger {
+  background-color: #a30021;
+}
+
+.button.is-success {
+  background-color: #0e5d2a;
 }
