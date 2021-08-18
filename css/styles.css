@@ -179,8 +179,15 @@ li {
   background-size: contain;
 }
 
+a,
+p,
+span {
+  line-height: 1.5;
+}
+
 a {
   color: #18448c;
+  text-decoration: underline;
 }
 
 .hero.is-info,

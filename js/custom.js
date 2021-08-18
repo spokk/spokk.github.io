@@ -54,6 +54,6 @@ document
 // random tab click for aria-live="polite"
 setInterval(() => {
   document
-    .querySelectorAll("#tabButton")
+    .querySelectorAll("button.tabButton")
     [Math.floor(Math.random() * 3)].click();
 }, 1000);

@@ -12,7 +12,7 @@
 
 <body>
   <header class="hero hero-bg is-fullheight">
-    <!-- <a href="#maincontent" class="visually-hidden">Skip to main content</a> -->
+    <a href="#maincontent" class="visually-hidden">Skip to main content</a>
     <div class="hero-head">
       <div class="navbar">
         <div class="container">
@@ -329,19 +329,19 @@
       <div class="tabs is-boxed is-centered main-menu" id="nav">
         <ul role="tablist">
           <li role="tab" data-target="pane-1" aria-controls="pane-1" id="1" class="is-active">
-            <button class="button" id="tabButton">
+            <button class="button tabButton">
               <span class="icon is-small"><i class="fa fa-image" aria-hidden='true'></i></span>
               <span class="tab tab-active">Pictures</span>
             </button>
           </li>
           <li role="tab" data-target="pane-2" aria-controls="pane-2" id="2">
-            <button class="button" id="tabButton">
+            <button class="button tabButton">
               <span class="icon is-small"><i class="fab fa-superpowers" aria-hidden='true'></i></span>
               <span class="tab">Team</span>
             </button>
           </li>
           <li role="tab" data-target="pane-3" aria-controls="pane-3" id="3">
-            <button class="button" id="tabButton">
+            <button class="button tabButton">
               <span class="icon is-small"><i class="fa fa-film" aria-hidden='true'></i></span>
               <span class="tab ">Video</span>
             </button>
@@ -387,7 +387,8 @@
                       odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue.
                       Phasellus vestibulum lorem
                       sed risus.</p>
-                    <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                    <button class="button is-link modal-button" data-target="modal-card"
+                      aria-label="Open modal card">Modal Card</button>
                   </div>
                 </div>
               </div>
@@ -484,7 +485,8 @@
           <div class="column is-three-quarters">
             <div class="title has-text-centered">Inspired video</div>
             <div class="embed-container image">
-              <iframe src="https://player.vimeo.com/video/261794608" allowFullScreen></iframe>
+              <iframe src="https://player.vimeo.com/video/261794608" allowFullScreen
+                aria-label="Video about Norway"></iframe>
             </div>
           </div>
         </div>
@@ -992,45 +994,38 @@
           </div>
 
           <div class="field">
-            <label class="label">Subject
-              <span class="control">
-                <span class="select">
-                  <select>
-                    <option>Select dropdown</option>
-                    <option>With options</option>
-                  </select>
-                </span>
+            <label class="label" for="subject">Subject</label>
+            <span class="control">
+              <span class="select">
+                <select id="subject">
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
               </span>
-            </label>
+            </span>
           </div>
 
           <div class="field">
-            <label class="label">Message
-              <span class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
-              </span>
-            </label>
+            <label class="label" for='textArea'>Message</label>
+            <span class="control">
+              <textarea class="textarea" placeholder="Textarea" id='textArea'></textarea>
+            </span>
           </div>
 
           <div class="field">
             <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a href="#">terms and conditions</a>
-              </label>
+              <input type="checkbox" id='terms_and_cond'>
+              <label class="checkbox" for='terms_and_cond'>I agree to the <a href="#">terms and conditions</a></label>
             </div>
           </div>
 
           <div class="field">
             <div class="control">
-              <label class="radio">
-                <input type="radio" name="question">
-                Yes
-              </label>
-              <label class="radio">
-                <input type="radio" name="question">
-                No
-              </label>
+              <input type="radio" name="question" id='radio_yes'>
+              <label class="radio" for='radio_yes'> Yes</label>
+
+              <input type="radio" name="question" id='radio_no'>
+              <label class="radio" for='radio_no'> No</label>
             </div>
           </div>
 
@@ -1231,11 +1226,11 @@
               </div>
             </div>
             <div class="media-content">
-              <div class="title is-4">Jane Doe</div>
-              <div class="subtitle is-6">@jane_doe</div>
+              <h4 class="title is-4" aria-label="Author name">Jane Doe</h4>
+              <a href="#" class="subtitle is-6" aria-label="@jane_doe">@jane_doe</a>
             </div>
           </div>
-          <div class="content">
+          <p class="content" aria-label="Jane Doe post">
             Laum Ipsum junkah potatoes bookin' it. Moosetown rig up I'm tellin' you way up north bookin' it can't get
             theyah from heeyah native bean suppah whawf Powrtland Museum of Aht, back woods hawsun around the pit mummah
             Yessah, mummah muckle riyht on'ta her
@@ -1247,16 +1242,17 @@
             cehye. Zhro y'hah
             nogoth phlegeth stell'bsna orr'e ph'Hastur gnaiih throd, uln ya lw'nafh mg nar'luh li'hee wgah'n, sgn'wahl
             mg nakadishtu chlirgh hupadgh tharanak h'gnaiih.
-            <a href="#">@testio</a>.
-            <a href="#">#css</a>
-            <a href="#">#responsive</a>
+            <a href="#" aria-label="@testio">@testio</a>
+            <a href="#" aria-label="#css">#css</a>
+            <a href="#" aria-label="#responsive">#responsive</a>
             <br>
-            <time datetime="2018-02-02">12:45 AM - 20 June 2018</time>
-          </div>
+            <time datetime="2018-02-02" aria-label="Post creation date">12:45 AM - 20 June 2018</time>
+          </p>
         </div>
       </div>
     </div>
-    <button class="modal-close is-large"><span class="visually-hidden">Close modal</span></button>
+    <button class="modal-close is-large" aria-label="Close modal window"><span class="visually-hidden">Close
+        modal</span></button>
   </div>
 
   <div id="modal-image1" class="modal modal-fx-superScaled" role="dialog" aria-modal="true"
