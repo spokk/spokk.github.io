@@ -272,3 +272,10 @@ a {
 #nav li.is-active button {
   border: 5px solid green;
 }
+
+.customTabs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 16px;
+}
