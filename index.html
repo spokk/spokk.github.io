@@ -7,6 +7,7 @@
   <title>Web Accessibility 2019 Q1 BY</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
   <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
+  <link rel="stylesheet" href="https://www.w3.org/TR/wai-aria-practices/examples/menu-button/css/MenubuttonLinks.css">
   <link rel="stylesheet prefetch" href="css/styles.css">
 </head>
 
@@ -30,42 +31,46 @@
             </button>
           </div>
 
-          <div id="navbarMenu" class="navbar-menu" role="navigation">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <button class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-home" aria-hidden='true'></i>
-                  </span>
-                  <span>Home</span>
-                </button>
+          <!-- Код взят как пример с - https://www.w3.org/TR/wai-aria-practices/examples/menu-button/menu-button-links.html -->
+          <div class="menu_button navbar-menu">
+            <button id="menubutton" aria-haspopup="true" aria-controls="menu2" class="button is-white is-outlined">
+              <span class="icon">
+                <i class="fa fa-book" aria-hidden='true'></i>
               </span>
-              <span class="navbar-item">
-                <button class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-superpowers" aria-hidden='true'></i>
-                  </span>
-                  <span>Examples</span>
-                </button>
-              </span>
-              <span class="navbar-item">
-                <button class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fa fa-book" aria-hidden='true'></i>
-                  </span>
-                  <span>Documentation</span>
-                </button>
-              </span>
-              <span class="navbar-item">
-                <button class="button is-white is-outlined">
-                  <span class="icon">
-                    <i class="fab fa-github" aria-hidden='true'></i>
-                  </span>
-                  <span>View Source</span>
-                </button>
-              </span>
-            </div>
+              <span>Menu</span>
+            </button>
+            <ul id="menu2" role="menu" aria-labelledby="menubutton">
+              <li role="none">
+                <a role="menuitem" href="/">
+                  Administration
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#">
+                  Team Settings
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#">
+                  Manage Your Team
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#">
+                  Invitations
+                </a>
+              </li>
+              <li role='separator'></li>
+              <li role="none">
+                <a role="menuitem" href="#">
+                  Authentication
+                </a>
+              </li>
+            </ul>
           </div>
+          <!-- Код взят как пример с - https://www.w3.org/TR/wai-aria-practices/examples/menu-button/menu-button-links.html -->
+
+
         </div>
       </div>
     </div>
@@ -1283,7 +1288,7 @@
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script defer src="https://cdn.disability.illinois.edu/skipto.min.js"></script>
-  <script>
+  <script type="text/javascript">
     var SkipToConfig = {
       settings: {
         skipTo: {
@@ -1292,6 +1297,19 @@
       }
     };
   </script>
+
+  <!-- Код взят как пример с - https://www.w3.org/TR/wai-aria-practices/examples/menu-button/menu-button-links.html -->
+  <script defer src="https://www.w3.org/TR/wai-aria-practices/examples/menu-button/js/Menubutton2.js"></script>
+  <script defer src="https://www.w3.org/TR/wai-aria-practices/examples/menu-button/js/PopupMenuLinks.js"></script>
+  <script defer src="https://www.w3.org/TR/wai-aria-practices/examples/menu-button/js/MenuItemLinks.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var menubutton = new Menubutton(document.getElementById('menubutton'));
+      menubutton.init();
+    }
+  </script>
+  <!-- Код взят как пример с - https://www.w3.org/TR/wai-aria-practices/examples/menu-button/menu-button-links.html -->
+
   <script async src="js/custom.js"></script>
 </body>
 
